@@ -12,3 +12,6 @@ RUN npm config set registry https://registry.npm.taobao.org
 RUN npm install
 RUN npm run build
 CMD ["npm", "start"]
+
+# 运行时的语句
+# docker run -dt -p 8080:3000 nuxt
