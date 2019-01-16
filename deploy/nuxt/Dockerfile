@@ -1,4 +1,4 @@
-FROM node:8.2.1
+FROM node
 MAINTAINER stark.wang
 ENV NODE_ENV=production
 ENV HOST 0.0.0.0
