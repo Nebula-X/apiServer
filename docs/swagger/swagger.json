@@ -1,18 +1,8 @@
 {
-    "swagger": "2.0",
     "info": {
-        "description": "apiserver demo",
-        "title": "Apiserver Example API",
-        "contact": {
-            "name": "lkong",
-            "url": "http://www.swagger.io/support",
-            "email": "466701708@qq.com"
-        },
-        "license": {},
-        "version": "1.0"
+        "contact": {},
+        "license": {}
     },
-    "host": "localhost:8080",
-    "basePath": "/v1",
     "paths": {
         "/login": {
             "post": {
@@ -335,11 +325,34 @@
                 }
             }
         },
+        "model.UserInfo": {
+            "type": "object",
+            "properties": {
+                "createdAt": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "password": {
+                    "type": "string"
+                },
+                "sayHello": {
+                    "type": "string"
+                },
+                "updatedAt": {
+                    "type": "string"
+                },
+                "username": {
+                    "type": "string"
+                }
+            }
+        },
         "model.UserModel": {
             "type": "object",
             "required": [
-                "username",
-                "password"
+                "password",
+                "username"
             ],
             "properties": {
                 "password": {
@@ -392,7 +405,7 @@
                 "userList": {
                     "type": "array",
                     "items": {
-                        "type": "\u0026{model UserInfo}"
+                        "$ref": "#/definitions/model.UserInfo"
                     }
                 }
             }
