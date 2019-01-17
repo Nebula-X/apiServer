@@ -1,4 +1,4 @@
-package cmd
+package main
 
 import (
 	"apiServer/httpClient/test"
@@ -90,6 +90,9 @@ func main() {
 			log.Info(http.ListenAndServeTLS(viper.GetString("tls.addr"), cert, key, g).Error())
 		}()
 	}
+
+	fmt.Println("hello world")
+	fmt.Println(viper.GetString("db.name"))
 
 	log.Infof("Start to listening the incoming requests on http address: %s", viper.GetString("addr"))
 	log.Info(http.ListenAndServe(viper.GetString("addr"), g).Error())
