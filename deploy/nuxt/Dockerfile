@@ -1,5 +1,5 @@
 FROM node
-MAINTAINER stark.wang
+MAINTAINER nebula.zhao
 ENV NODE_ENV=production
 ENV HOST 0.0.0.0
 RUN mkdir -p /app
