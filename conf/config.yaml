@@ -22,7 +22,7 @@ log:
   log_backup_count: 7
 # 数据库设置
 db:
-  name: db_apiserver
+  name: nebula
   addr: 127.0.0.1:3306
   username: root
-  password: root
+  password: 123456
