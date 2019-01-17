@@ -1,13 +1,16 @@
-runmode: debug                 # 开发模式, debug, release, test
-addr: :8080                  # HTTP绑定端口
-name: apiserver              # API Server的名字
-url: http://127.0.0.1:8080   # pingServer函数请求的API服务器的ip:port
-max_ping_count: 10           # pingServer函数try的次数
+# 开发模式,debug, release, test
+runmode: debug
+# HTTP服务绑定端口
+addr: :8080
+# API服务名称
+name: apiserver
+# 检查函数请求的API服务器的地址
+url: http://127.0.0.1:8080
+# 检查服务器是否正常运行的重试次数，如果访问成功，则不会重试
+max_ping_count: 10
+# JWT的部署密码
 jwt_secret: Rtg8BPKNEf2mB4mgvKONGPZZQSaJWNLijxR42qRgq0iBb5
-tls:
-  addr: :8081
-  cert: conf/server.crt
-  key: conf/server.key
+# 日志设置
 log:
   writers: stdout
   logger_level: DEBUG
@@ -17,12 +20,8 @@ log:
   log_rotate_date: 1
   log_rotate_size: 1
   log_backup_count: 7
+# 数据库设置
 db:
-  name: db_apiserver
-  addr: 127.0.0.1:3306
-  username: root
-  password: root
-docker_db:
   name: db_apiserver
   addr: 127.0.0.1:3306
   username: root
